@@ -1,0 +1,191 @@
+body {
+    background-image: url("../images/bg-body.png");
+    background-size: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+header main footer {
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#logo {
+    display: block;
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #bfb588;
+}
+
+#menuHeader {
+    width: 80%;
+    margin: 10px auto;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menuHeader li{
+    background-color: yellow;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#menuHeader li:hover{
+    background-color: green;
+}
+
+#menuHeader li:first-child {
+    margin-left: 0;
+}
+#menuHeader li:last-child {
+    margin-right: 0;
+}
+
+#menuHeader li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* main */
+
+#bannerTopo {
+    background-image: url("../images/img-banner.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 30vh;
+}
+
+section {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cards {
+    flex: 1 1 auto;
+    margin: 10px 0;
+    position: relative;
+}
+
+.img-produto {
+    overflow: hidden;
+    transition: filter 0.8s ease-in-out;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.img-produto :hover {
+    filter: drop-shadow(0px 2px 0.75rem #51504e);
+}
+
+.pratoFoto {
+    position: relative;
+    margin: 0;
+    width: 30%;
+    height: auto;
+    transition: all 0.8s ease-in-out;
+}
+
+.cards :hover .pratoFoto {
+    transform: scale(1.1);
+}
+
+.fotoAmpliada {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.1em;
+    line-height: 2.2em;
+}
+
+.btn {
+    background-color: #51504e;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    color: #fff;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.4s ease-in-out;
+    border-style: none;
+}
+
+.btn :hover {
+    background-color: #ab1414;
+}
+
+/* footer */
+
+footer {
+    background-color: rosybrown;
+    bottom: 0;
+    margin-bottom: 0;
+    border-radius: 40px 40px 0 0;
+    padding: 10px;
+    height: 100px;
+}
+
+#menuFooter{
+    width: 66%;
+    margin: 10px auto;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menuFooter li:first-child{
+    margin-left: 0;
+}
+
+#menuFooter li:last-child{
+    margin-right: 0;
+}
+
+/* media queries */
+
+@media only screen and (min-width:480px){
+    #bannerTopo {
+        min-height: 24vh;
+    }
+    .cards{
+        max-width: 48%;
+    }
+    #pratoFoto {
+        max-height: 113px;
+    }
+    
+}
+
